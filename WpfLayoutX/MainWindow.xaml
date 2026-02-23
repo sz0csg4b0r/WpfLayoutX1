@@ -1,0 +1,76 @@
+﻿<Window x:Class="WpfLayoutX.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLayoutX"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="WPF_Layout" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="WrapPanel">
+            <WrapPanel>
+                <Button
+                    Background="MidnightBlue"
+                    Foreground="White"
+                    Width="300"
+                    FontSize="22"
+                    Height="100"
+                    >Ez egy gomb</Button>
+                <TextBlock
+                    FontSize="22"
+                    Margin="50,0,0,0"
+                   >Ez egy random szöveg 22-es betűmérettel</TextBlock>
+                <TextBlock 
+                    FontSize="30"
+                    Background="Tomato"
+                    Text="Ez egy másik random szöveg 30-as betűmértettel"></TextBlock>
+                <Button 
+                    x:Name="wrapPanelBtn2"
+                    Background="MidnightBlue"
+                    Foreground="White"
+                    Height="100"
+                    FontSize="22"
+                    Content="Gomb width nélkül"
+                    >
+
+                </Button>
+            </WrapPanel>
+        </TabItem>
+
+
+
+        <TabItem Header="StackPanel">
+            <StackPanel>
+                <Button
+                    Background="MidnightBlue"
+                    Foreground="White"
+                    Width="300"
+                    FontSize="22"
+                    Height="100"
+                    >Ez egy gomb</Button>
+                <TextBlock TextWrapping="Wrap" FontSize="32" 
+                           Text=" Ez egy hosszú szöveg ami lehetne rövidebb is de hosszú lett">
+                    
+                    
+                </TextBlock>
+                <Button
+            Background="MidnightBlue"
+            Foreground="White"
+            FontSize="22"
+            Height="100"
+            >Ez egy szélesség nélküli gomb</Button>
+
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="DockPanel">
+            <DockPanel>
+                <TextBlock 
+                Background="LightCoral"
+                FontSize="24"
+                Text="Ez a header rész"
+                ></TextBlock>
+            </DockPanel>
+        </TabItem>       
+    </TabControl>
+</Window>
