@@ -51,8 +51,8 @@
                     >Ez egy gomb</Button>
                 <TextBlock TextWrapping="Wrap" FontSize="32" 
                            Text=" Ez egy hosszú szöveg ami lehetne rövidebb is de hosszú lett">
-                    
-                    
+
+
                 </TextBlock>
                 <Button
             Background="MidnightBlue"
@@ -66,11 +66,105 @@
         <TabItem Header="DockPanel">
             <DockPanel>
                 <TextBlock 
+                    DockPanel.Dock="Top"
                 Background="LightCoral"
                 FontSize="24"
                 Text="Ez a header rész"
                 ></TextBlock>
+                <TextBlock 
+                     DockPanel.Dock="Bottom"
+                 Background="MintCream"
+                 FontSize="24"
+                 Text="Ez a footer rész"
+                 ></TextBlock>
+                <ListView Width="175"
+                          DockPanel.Dock="Left">
+                    <Image Source="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" Height="100" Margin="0,10"/>
+                </ListView>
+                <ListBox DockPanel.Dock="Right">
+                    <ListBoxItem Background="Yellow">Alma</ListBoxItem>
+                    <ListBoxItem Background="Blue">Körte</ListBoxItem>
+                    <ListBoxItem Background="Red">Zsiráf</ListBoxItem>
+                    <ListBoxItem Background="Green">Tégla</ListBoxItem>
+                </ListBox>
             </DockPanel>
-        </TabItem>       
+        </TabItem>
+        <TabItem Header="Grid elrendezés">
+            <Grid ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button 
+                    Background="Blue"
+                    Content=" Gomb1"
+                    Foreground="White"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    ></Button>
+                <TextBox
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    >Ide írhatsz valamit</TextBox>
+                <DataGrid
+                    BorderBrush="MidnightBlue"
+                    BorderThickness="3"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    >
+                    
+                </DataGrid>
+            </Grid>
+            
+        </TabItem>
+        <TabItem Header="Canvas">
+            <Canvas>
+                <Rectangle Width="300"
+                           Height="200"
+                           Fill="Gold"
+                           Canvas.Left="50"
+                           Canvas.Top="50">
+                    
+                </Rectangle>
+                <Rectangle Width="100"
+                           Height="50"
+                           Canvas.Right="50"
+                           Canvas.Bottom="50"
+                           Fill="Green"
+                           >
+                </Rectangle>
+                <Ellipse
+                    Width="100"
+                    Height="100"
+                    Fill="Tomato"
+                    StrokeThickness="5"
+                    Stroke="Black"
+                    Canvas.Left="300"
+                    Canvas.Bottom="150"
+                    >
+                </Ellipse>
+            </Canvas>
+        </TabItem>
+        <TabItem Header="Uniform Grid elrendezés">
+            <UniformGrid Columns="10"
+                         Rows="5">
+                <Button>1</Button>
+                <Button>2</Button>
+                <Button>3</Button>
+                <Button>4</Button>
+                <Button>5</Button>
+                <Button>6</Button>
+                <Button>7</Button>
+            </UniformGrid>
+        </TabItem>
     </TabControl>
 </Window>
